@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-manrope text-3xl font-bold lg:text-5xl lg:leading-snug xl:text-[3.8rem] xl:leading-[5rem];
+  }
+
+  h1,
+  .h1 {
+    @apply font-manrope text-3xl font-bold md:text-5xl;
+  }
+
+  h2,
+  .h2 {
+    @apply font-manrope text-xl font-bold md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-manrope text-lg font-bold md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-manrope text-base font-bold md:text-xl;
+  }
+
+  body,
+  .p {
+    @apply font-manrope text-sm md:text-base;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-56px)];
+  }
+}
+
+html,
+body,
+#__next {
+  @apply h-full w-full;
+}
+
+:root {
+  --primary: #ffffff;
+  --secondary: #16c098;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+}
+
+.container {
+  @apply px-5 lg:px-8;
+}

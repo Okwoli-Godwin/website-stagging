@@ -1,0 +1,14 @@
+.reviews {
+  @apply text-primary-black/50;
+  .swiper-slide-active {
+    .slide {
+      background: linear-gradient(
+        155.5deg,
+        #0ddead -5.84%,
+        rgba(41, 163, 155, 0.92) 48.04%,
+        #005459 104.21%
+      );
+      @apply text-white;
+    }
+  }
+}
